@@ -1,33 +1,38 @@
-<footer id="contact">
+<footer id="contact" class="bg-gray-900 text-white py-10">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start space-y-6 md:space-y-0 md:space-x-6">
 
-    <div class="logo footer-logo">
-            <img id="logo" src="<%= content.logoImgUrl %>" alt="<%= content.logoName %>">
-    </div>
-    
-    <div class="footer-container">
+            <div class="logo footer-logo flex flex-col items-center mb-6 md:mb-0 md:w-1/3">
+                <img id="logo" src="<%= content.logoImgUrl %>" alt="<%= content.logoName %>" class="w-32 h-auto mb-4">
+                <div class="feedback text-center w-full">
+                    <%- include('./modal-feed-back') %>
+                </div>
+            </div>
 
-        <div class="feedback">
-            <%- include('./feedback') %>
-        </div>
-        
-        <div class="contact-social">
-            <h3>Контактная информация</h3>
-            <p>Адрес: <%= content.address %></p>
-            <p>Телефон: <%= content.phone %></p> 
-            <p>Email: <%= content.email %></p>
-        
-            <div class="footer-social" aria-label="Социальные сети">
-                <h3>Где нас найти</h3>
-                <ul id="social-links">
-                    <% content.socialMedia.forEach( sm => { %>
-                        <li><a href="<%= sm.linkToSM %>" target="_blank" rel="noopener noreferrer"><img src="<%= sm.imgUrl %>" alt="<%= sm.title %>"><span><%= sm.title %></span></a></li>
-                    <% }) %>
-                </ul>
+            <div class="contact-social mb-6 md:mb-0 md:w-1/3">
+                <h3 class="text-xl font-semibold mb-2">Контактная информация</h3>
+                <p class="text-sm">Адрес: <%= content.address %></p>
+                <p class="text-sm">Телефон: <%= content.phone %></p> 
+                <p class="text-sm">Email: <%= content.email %></p>
+
+                <div class="footer-social mt-4">
+                    <h3 class="text-xl font-semibold mb-1">Где нас найти</h3>
+                    <ul id="social-links" class="flex space-x-4">
+                        <% content.socialMedia.forEach(sm => { %>
+                            <li>
+                                <a href="<%= sm.linkToSM %>" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 hover:text-blue-400 transition duration-300">
+                                    <img src="<%= sm.imgUrl %>" alt="<%= sm.title %>" class="w-6 h-6">
+                                    <span class="text-sm"><%= sm.title %></span>
+                                </a>
+                            </li>
+                        <% }) %>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="footer-bottom">
-        <p>&copy; <%= new Date().getFullYear() %> Все права защищены.</p>
+        <div class="footer-bottom text-center mt-6 border-t border-gray-700 pt-6">
+            <p class="text-sm">&copy; <%= new Date().getFullYear() %> Все права защищены.</p>
+        </div>
     </div>
 </footer>

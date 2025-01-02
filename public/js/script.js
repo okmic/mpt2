@@ -19,53 +19,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     })
 })
 
-//FORM -------------------------->
-
-document.getElementById('dataCollector').addEventListener('submit', function (event) {
-    event.preventDefault()
-
-    const name = document.getElementById('name').value
-    const email = document.getElementById('email').value
-    const phone = document.getElementById('phone').value
-
-    const submitButton = document.getElementById('submitButton')
-    submitButton.disabled = true
-
-    const loader = document.getElementById('loader')
-
-    loader.classList.remove('hidden')
-
-    const buttonText = document.getElementById('buttonText')
-    buttonText.innerText = ''
-
-    fetch('/api/telegram/send', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            userName: name,
-            userEmail: email,
-            userPhone: phone
-        }),
-    })
-        .then(response => response.json())
-        .then(r => {
-            document.getElementById('response').innerText = `Спасибо, ${name}! Мы с вами свяжемся!`
-            document.getElementById('dataCollector').reset()
-            loader.classList.add('hidden')
-            buttonText.innerText = 'Отправить'
-            submitButton.disabled = false
-        })
-        .catch((e) => {
-            document.getElementById('response').innerText = `Ошибка при отправке сообщения.`
-            document.getElementById('dataCollector').reset()
-            loader.classList.add('hidden')
-            buttonText.innerText = 'Отправить'
-            submitButton.disabled = false
-        })
-})
-
 //scroll to top
 
 const scrollToTopBtn = document.getElementById('scrollToTopBtn')
