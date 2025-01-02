@@ -1,0 +1,18 @@
+<div id="how-it-works" class="how-it-works bg-gray-100 py-10">
+    <div class="titleHowItWorks text-center mb-10">
+        <span class="text-4xl md:text-5xl font-bold">Как это работает</span>
+    </div>
+    <div class="worksIcons flex flex-wrap justify-center space-x-4">
+        <% content.works.forEach(work => { %>
+            <div class="flex flex-col items-center bg-white shadow-lg rounded-lg p-8 w-80 md:w-96 lg:w-[400px] mb-8">
+                <div class="iconContainer mb-6">
+                    <img src="<%= work.imgUrl %>" alt="<%= work.title %>" class="w-32 h-32 mx-auto">
+                </div>
+                <div class="worksIcons_content text-center">
+                    <span class="worksIcons_content_title text-3xl md:text-4xl font-semibold mb-4"><%= work.title %></span>
+                    <p class="text-gray-600 text-lg">Здесь может быть описание того, как работает этот процесс или услуга. Мы предоставляем клиентам лучшие решения.</p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>

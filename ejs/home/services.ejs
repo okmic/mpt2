@@ -1,21 +1,20 @@
-<div id="services" class="services">
-    <div class="titleServices">
-        <span class="whiteBorder">УСЛУГИ</span>
+<div id="services" class="services bg-gray-100 py-10">
+    <div class="titleServices text-center mb-8">
+        <span class="whiteBorder text-3xl md:text-4xl font-bold">УСЛУГИ</span>
     </div>
-    <div class="servicesIcons">
+    <div class="servicesIcons flex flex-wrap justify-center space-x-4">
         <% content.services.forEach(service => { %>
-            <div>
-                <div class="iconContainer redBorder">
-                    <img src="<%= service.imgUrl %>" alt="<%= service.title %>">
+            <div class="flex flex-col items-center bg-white shadow-lg rounded-lg p-6 w-72 md:w-80 lg:w-96 mb-6 transition-transform transform hover:scale-105">
+                <div class="iconContainer redBorder mb-4">
+                    <img src="<%= service.imgUrl %>" alt="<%= service.title %>" class="w-24 h-24 mx-auto">
                 </div>
-                <div class="servicesIcons_content">
-                    <span class="servicesIcons_content_title"><%= service.title %></span>
+                <div class="servicesIcons_content text-center">
+                    <span class="servicesIcons_content_title text-2xl md:text-3xl font-semibold mb-3"><%= service.title %></span>
                     <% service.items.forEach(item => { %>
-                        <p class="servicesIcons_content_txt redDots"><%= item.text %></p>
+                        <p class="servicesIcons_content_txt redDots text-gray-700 text-base md:text-lg"><%= item.text %></p>
                     <% }); %>
                 </div>
             </div>
         <% }); %>
-
     </div>
 </div>
