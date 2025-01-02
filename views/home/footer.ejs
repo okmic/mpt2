@@ -1,0 +1,33 @@
+<footer id="contact">
+
+    <div class="logo footer-logo">
+            <img id="logo" src="<%= content.logoImgUrl %>" alt="<%= content.logoName %>">
+    </div>
+    
+    <div class="footer-container">
+
+        <div class="feedback">
+            <%- include('./feedback') %>
+        </div>
+        
+        <div class="contact-social">
+            <h3>Контактная информация</h3>
+            <p>Адрес: <%= content.address %></p>
+            <p>Телефон: <%= content.phone %></p> 
+            <p>Email: <%= content.email %></p>
+        
+            <div class="footer-social" aria-label="Социальные сети">
+                <h3>Где нас найти</h3>
+                <ul id="social-links">
+                    <% content.socialMedia.forEach( sm => { %>
+                        <li><a href="<%= sm.linkToSM %>" target="_blank" rel="noopener noreferrer"><img src="<%= sm.imgUrl %>" alt="<%= sm.title %>"><span><%= sm.title %></span></a></li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; <%= new Date().getFullYear() %> Все права защищены.</p>
+    </div>
+</footer>

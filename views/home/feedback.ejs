@@ -1,0 +1,23 @@
+<div class="feedBack">
+    <h3>Оставьте заявку, мы перезвоним!</h3>
+    <form id="dataCollector">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Номер телефона:</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Введите 10-значный номер телефона без пробелов и символов">
+        
+        <button id="submitButton" type="submit">
+            <span id="buttonText">Отправить</span>
+            <span id="loader" class="loader hidden">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </span>
+        </button>
+    </form>
+    <div id="response" style="margin-top: 20px;"></div>
+</div>

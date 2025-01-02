@@ -1,0 +1,13 @@
+<% content.works.forEach(work => {%>
+
+    <div id="this-work" class="this-work">  
+        <div class="this-work_img_2">
+            <img src="<%= work.imgUrl %>" alt="<%= work.title %>">
+        </div> 
+        <div class="this-work_content">
+            <h3 class="this-work_content_title_2"><%= work.title %></h3>
+            <div class="divider"></div>
+        </div>
+    </div>
+
+<% }) %>

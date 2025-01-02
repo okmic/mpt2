@@ -1,0 +1,21 @@
+<div id="services" class="services">
+    <div class="titleServices">
+        <span class="whiteBorder">УСЛУГИ</span>
+    </div>
+    <div class="servicesIcons">
+        <% content.services.forEach(service => { %>
+            <div>
+                <div class="iconContainer redBorder">
+                    <img src="<%= service.imgUrl %>" alt="<%= service.title %>">
+                </div>
+                <div class="servicesIcons_content">
+                    <span class="servicesIcons_content_title"><%= service.title %></span>
+                    <% service.items.forEach(item => { %>
+                        <p class="servicesIcons_content_txt redDots"><%= item.text %></p>
+                    <% }); %>
+                </div>
+            </div>
+        <% }); %>
+
+    </div>
+</div>

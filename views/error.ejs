@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <link rel="icon" href="media/favicon.png" type="image/x-icon"> 
+    <title>Ошибка</title>
+    <style>
+        html {
+            background-color: #262626;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #262626, #383838);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        .container {
+            background-color: #ffffff10;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #ff3e3f;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff3e3f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            background-color: #e63939; 
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="<%= content.logoImgUrl %>" alt="Sigma">
+        <h1>Упс! Непредвиденная ошибка</h1>
+        <p>Что-то пошло не так. Пожалуйста, попробуйте позже.</p>
+        <a href="/">Вернуться на главную</a>
+    </div>
+</body>
+</html>
