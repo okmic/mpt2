@@ -1,0 +1,15 @@
+<div class="flex items-center justify-center min-h-screen w-screen">
+    <div class="flex flex-col md:flex-row w-full max-w-6xl h-auto md:h-screen">
+        <div class="flex-1 flex justify-center items-center order-1 md:order-2 p-4 md:p-4"> <!-- Уменьшены отступы -->
+            <img src="<%= content.mainBlockImgUrl %>" alt="Main Img" class="w-full max-w-[500px] h-auto object-contain rounded-lg md:rounded-none">
+        </div>
+        <div class="p-4 md:p-8 flex-1 flex flex-col justify-center items-center order-2 md:order-1">
+            <h1 class="text-3xl md:text-5xl font-bold mb-2 text-center"><%= content.mainBlockTitle %></h1> <!-- Уменьшен отступ между заголовком и текстом -->
+            <p class="text-gray-700 mb-4 text-base md:text-lg text-center"><%= content.mainBlockDescription %></p> <!-- Уменьшен отступ между текстом и кнопками -->
+            <div class="flex space-x-4">
+                <button class="bg-transparent text-blue-500 rounded-lg px-6 py-3 hover:bg-blue-500 hover:text-white transition duration-300 text-base md:text-lg">О компании</button>
+                <button class="bg-blue-500 text-white rounded-lg px-6 py-3 hover:bg-blue-600 transition duration-300 text-base md:text-lg">Продукты</button>
+            </div>
+        </div>
+    </div>
+</div>
