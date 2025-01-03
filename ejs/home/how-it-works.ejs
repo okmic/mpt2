@@ -1,7 +1,17 @@
 <div id="how-it-works" class="how-it-works bg-gray-100 py-10">
-    <div class="titleHowItWorks text-center mb-10">
+    <div class="titleHowItWorks text-center mb-0">
         <span class="text-4xl md:text-5xl font-bold">Как это работает</span>
+    
+        <section id="about" class="py-5">
+            <div class="container mx-auto px-4">
+                <p class="text-center max-w-2xl mx-auto">
+                    <%= content.companyDescription %>
+                </p>
+            </div>
+        </section>
     </div>
+    
+
     <div class="worksIcons flex flex-wrap justify-center space-x-4">
         <% content.works.forEach(work => { %>
             <div class="flex flex-col items-center bg-white shadow-lg rounded-lg p-8 w-80 md:w-96 lg:w-[400px] mb-8">
