@@ -2,18 +2,18 @@
     <div class="container mx-auto px-4 py-4">
         <nav class="flex justify-between items-center">
             <div class="flex items-center space-x-4">
-                <img src="<%= content.logoImgUrl %>" alt="<%= content.logoName %>" class="h-10"> <!-- Замените путь на свой логотип -->
-                <a href="#" class="text-white hover:underline">Продукты</a>
+                <a href="/"><img src="<%= content.logoImgUrl %>" alt="<%= content.logoName %>" class="h-10"></a>
+                <a href="/products" class="text-white hover:underline">Продукты</a>
             </div>
             <div class="hidden md:flex space-x-4">  <!-- Горизонтальное расположение на больших экранах -->
-                <a href="#" class="text-white hover:underline">Сервисы</a>
-                <a href="#" class="text-white hover:underline">Как это работает</a>
-                <a href="#" class="text-white hover:underline">Контакты</a>
+                <a href="/#how-it-works" class="text-white hover:underline">Как это работает</a>
+                <a href="/#services" class="text-white hover:underline">Сервисы</a>
+                <a href="/#contact" class="text-white hover:underline">Контакты</a>
             </div>
             <div class="md:hidden flex flex-col items-end space-y-2 mt-4"> <!-- Вертикальное расположение на мобильных экранах -->
-                <a href="#" class="text-white hover:underline">Сервисы</a>
-                <a href="#" class="text-white hover:underline">Как это работает</a>
-                <a href="#" class="text-white hover:underline">Контакты</a>
+                <a href="/#how-it-works" class="text-white hover:underline">Как это работает</a>
+                <a href="/#services" class="text-white hover:underline">Сервисы</a>
+                <a href="/#contact" class="text-white hover:underline">Контакты</a>
             </div>
         </nav>
     </div>
