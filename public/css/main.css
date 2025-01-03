@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth; 
+}
 .footer-logo img {
     transition: transform 0.3s;
 }
