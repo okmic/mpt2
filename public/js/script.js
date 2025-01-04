@@ -5,7 +5,7 @@ document.getElementById('mobile-menu').addEventListener('click', function () {
 
     this.classList.toggle('active')
 })
-//CLICK TO NAV 
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault()
@@ -18,8 +18,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         })
     })
 })
-
-//scroll to top
 
 const scrollToTopBtn = document.getElementById('scrollToTopBtn')
 

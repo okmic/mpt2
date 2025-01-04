@@ -9,10 +9,10 @@ function addToCart(id, title, price) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart))
-    updateCart()
+    updateCart(true)
 }
 
-function updateCart() {
+function updateCart(isApp) {
     const cartItems = JSON.parse(localStorage.getItem('cart')) || []
     const cartItemsContainer = document.getElementById('cart-items')
     cartItemsContainer.innerHTML = ''
@@ -32,8 +32,7 @@ function updateCart() {
     const totalPriceElement = document.getElementById('total-price')
     totalPriceElement.textContent = `₽${totalPrice.toFixed(2)}`
 
-    const cartModal = document.getElementById('cart-modal')
-    cartModal.style.display = cartItems.length > 0 ? 'flex' : 'none' 
+    if(!isApp) document.getElementById('cart-modal').style.display = cartItems.length > 0 ? 'flex' : 'none' 
 
     const cartCountElement = document.getElementById('cart-count')
     const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0)
