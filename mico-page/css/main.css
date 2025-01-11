@@ -1,0 +1,37 @@
+html {
+    scroll-behavior: smooth; 
+}
+.footer-logo img {
+    transition: transform 0.3s;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.05);
+}
+
+.footer-social a {
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #f3f4f6; 
+}
+
+/* Стили для скролл бара */
+::-webkit-scrollbar {
+    width: 12px; /* Ширина скролл бара */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет фона трека скролл бара */
+    border-radius: 10px; /* Закругление углов трека */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #007bff; /* Цвет скролл бара */
+    border-radius: 10px; /* Закругление углов скролл бара */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3; /* Цвет скролл бара при наведении */
+}
